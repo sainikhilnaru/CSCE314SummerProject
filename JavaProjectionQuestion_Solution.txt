@@ -1,0 +1,51 @@
+Sainikhil Naru
+CSCE 314 Summer 2019
+07/24/2019
+
+
+
+FileAccess.java
+
+// What is a try/catch block and why do we need one?
+
+   Ans: The try statement allows you to define a block of code to be tested for errors while it is being executed.
+The catch statement allows you to define a block of code to be executed, if an error occurs in the try block. When we are executing java 
+code, we might get different errors due to different reasons. We need both of these statemetns because if an error occurs, Java stops and generates an error message(throw an exception) but if we are able to catch this error, we can define the appropriate message thats needs to shown in the program if not working. You always want to give the user a meaningful message for each type of exception rather then a generic message.
+
+ // What is an exception?
+
+Exceptions are events that occur during the execution of programs that disrupt the flow of instructions given by the program to the computer (e.g. divide by zero, array access is out of bound, etc.). The general rules are:- an exception is an object that wraps an error event that occurred within a method.Exception objects can be thrown and caught. For example, FileNotFoundException, IOException, SocketTimeoutException,NullPointerException,
+ArrayIndexOutOfBoundsException,ArithmeticException.
+
+
+Workouts.java
+
+// We choose ArrayList over Vector because...?
+
+ ArrayList is implemented as a resizable array and ArrayList is a better choice if your program is thread-safe.
+Vector is slower than the Arraylist because all the methods of Vector are synchronized but the Arraylist methods and not synchronized so it is faster than Vector. 
+Performance: ArrayList is faster	
+
+// Why didn't I have to declare this static?
+
+You don't need to declare it to be static because you are using it inside the inner class which work mostly with an instance of an outer class.
+You can't access instance variables from static methods. The use of only static methods would prevent many things from working, and so lose out on  extensibility of your system.
+
+//This is a nested class, also known as an inner class. Why do we use a nested class?
+
+You have to create many methods for inner class, and also this class is only useful in terms of internal implementation uses. Another reason is you are able to easily access the variables is Workout object by referencing them in other files. For example:- Workout.equipments would be accessed this way. 
+
+// How do we get the name of an enumeration value?
+
+You can get the name of the enumeration value by using the inbuilt function toString(). For example, (any enum placed here).toString().
+
+// What is short-circuit evaluation? 
+
+The && and || operators "short-circuit", meaning they don't evaluate the right hand side if it isn't necessary.
+There is only one case of short-circuiting for each operator, and they are:
+
+false && (...) - it is not even necessary to know what the right hand side is because the result will always be false
+true || (...) - it is not necessary to know what the right hand side is beacause the result must be true
+
+Short Circuit Evaluation in plain english means stopping evaluation once you know that the answer can no longer change.
+
